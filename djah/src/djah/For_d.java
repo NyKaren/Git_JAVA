@@ -2,12 +2,14 @@ package djah;
 import java.util.Scanner;
 
 public class For_d {
+	
+	
 	public static void main (String [] args){
-        int[] numero;
-		numero = new int[4];
+        int[] numero = new int[4];
         double soma = 0;
         System.out.print("Digite 5 números e descubra a soma dos múltiplos de 3 que há no conjunto.");
         for (int i = 0; i <= 4; i++){
+        	 System.out.print("Digite o valor "+(i+1));
         	numero [i] = new Scanner(System.in).nextInt();
 			if (i % 3 == 0) {
 				soma += i;
