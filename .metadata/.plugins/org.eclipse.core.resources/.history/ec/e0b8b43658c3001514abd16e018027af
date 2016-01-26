@@ -1,0 +1,8 @@
+package aprendendo;
+
+public class TesteDesafio {
+	int x = 37;
+	public static void main(String [] args) {
+	System.out.println(x);
+	}
+}

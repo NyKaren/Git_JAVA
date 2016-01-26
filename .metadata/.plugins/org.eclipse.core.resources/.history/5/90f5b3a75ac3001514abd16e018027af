@@ -1,0 +1,62 @@
+package banco;
+
+public class Conta {
+	int numero;
+	static double saldo;
+	double limite;
+	private Cliente titular;
+	private static int totalDeContas;
+	public double getSaldo() {
+	return this.saldo;
+	}
+	void deposita(double quantidade){
+		this.saldo+= quantidade;
+	}
+	public void setSaldo(double saldo) {
+	this.saldo = saldo;
+	}
+	public double getLimite() {
+	return this.limite;
+	}
+	public void setLimite(double limite) {
+	this.limite = limite;
+	}
+	public Cliente getTitular() {
+	return this.titular;
+	}
+	public void setTitular(Cliente titular) {
+	this.titular = titular;
+	}
+	public void saca(double quantidade) {
+		//posso sacar até saldo+limite
+		if (quantidade > this.saldo + this.limite){
+		System.out.println("Não posso sacar fora do limite!");
+		} else {
+		this.saldo = this.saldo - quantidade;
+		}
+	}
+	// construtor
+	Conta(Cliente titular) {
+	this.titular = titular;
+	}
+	Conta (int numero, Cliente titular) {
+		this(titular); // chama o construtor que foi declarado acima
+		this.numero = numero;
+	}
+	Conta() {
+		Conta.totalDeContas = Conta.totalDeContas + 1;
+	}
+	public static int getTotalDeContas() {
+		return Conta.totalDeContas;
+	}
+	public static void main(String[] args){
+		Conta minhaConta;
+		minhaConta =new Conta();
+		Cliente carlos = new Cliente();
+		carlos.nome = "Carlos";
+		Conta c = new Conta(carlos);
+		System.out.println(c.titular.nome);
+		int total = Conta.getTotalDeContas();
+		System.out.println("Saldo atual: " + saldo);
+	}
+}

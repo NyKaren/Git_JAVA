@@ -1,0 +1,15 @@
+package banco;
+
+public class Funcionario {
+	private double salario;	
+	public double getSalario() {
+		return this.salario;
+	}
+	public void setSalario(double salario) {
+		this.salario = salario;		
+	}
+	public static void main(String[] args){
+		funcionario.setSalario(100);
+		System.out.println(funcionario.getSalario());
+	}
+}

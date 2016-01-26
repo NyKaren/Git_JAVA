@@ -1,0 +1,22 @@
+package banco;
+
+public class Funcionario {
+	public Funcionario() {
+		// construtor sem argumentos
+	}
+	public Funcionario(String nome) {
+		// construtor que recebe o nome
+	}
+	private double salario;	
+	public double getSalario() {
+		return this.salario;
+	}
+	public void setSalario(double salario) {
+		this.salario = salario;		
+	}
+	public static void main(String[] args){
+		Funcionario f = new Funcionario();
+		f.setSalario(100);
+		System.out.println(f.getSalario());
+	}
+}

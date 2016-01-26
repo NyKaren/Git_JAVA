@@ -1,0 +1,36 @@
+package tamanho;
+
+public class Tamanho {
+	public static void imprimeArray(int[] array) {
+		if(array!=null){
+			for (int i = 0; i < array.length; i++) {
+				System.out.println(array[i]);
+			}
+			
+			/*for (int valor: array) {
+				System.out.println(valor);
+			}*/
+		}
+		
+	}
+	public static void mostraEmpregados(String[] array) {
+		for (int i=0; i<array.length;i++){
+			System.out.println("Funcionário na posição: " + array[i]);
+		}
+	}
+	public static void main(String[] args){
+		int[]  array1 = {10,20,30};
+				
+		int[] array2 = new int[3];
+		array2[0]=40;
+		array2[1]=50;
+		array2[2]=60;
+		
+		int[] array3 = new int[]{20,30,50,66,88};
+		
+		imprimeArray(array3);
+		
+		mostraEmpregados(new String[]{"Karen","Vitória"});
+		
+	}
+}

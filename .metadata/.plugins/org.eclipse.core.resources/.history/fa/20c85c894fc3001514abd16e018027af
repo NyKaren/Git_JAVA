@@ -1,0 +1,12 @@
+package banco;
+
+public class Conta {
+	int numero;
+	Cliente titular;
+	private double saldo;
+	private double limite;
+	// ..
+	void saca(double quantidade) {
+	this.saldo = this.saldo ‐ quantidade;
+	}
+}
